@@ -15,8 +15,8 @@ export interface MenuItem {
     category: 'pizza' | 'aperitivo' | 'bebidas' | 'sobremesa'
     image: string;
     popular?: boolean;
-    ingredints?: string[];
-    size?: {
+    ingredients?: string[];
+    sizes?: {
         small: number;
         medium: number;
         large: number;
@@ -39,7 +39,7 @@ export interface Order {
     totalAmount: number;
     status: 'pendente' | 'em-preparo' | 'pronto' | 'entregue' | 'cancelado';
     orderDate: Date;
-    estimatedDeliveyTime?: Date;
+    estimatedDeliveryTime?: Date;
     deliveryAddress: string;
     customerInfo: {
         name: string;
