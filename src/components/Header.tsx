@@ -24,8 +24,8 @@ export function Header({ showMobileMenu, setShowMobileMenu }: HeaderProps) {
                 <div className="flex justify-between items-center h-16">
                     {/* LOGO */}
                     <div className="flex items-center space-x-2">
-                        <Pizza className="h-8 w-8 text-red-600" />
-                        <span className="text-2xl font-bold text-red-600">Pizza Silva</span>
+                        <Pizza className="h-8 w-8 text-green-800" />
+                        <span className="text-2xl font-bold text-red-600">Pizzaria Silva</span>
                     </div>
 
                     {/* DESKTOP NAVIGATION */}

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { AppProvider, useApp } from './context/appContext';
 import { Header } from './components/Header';
 import { HomePage } from './components/HomePage'; 
+import { AuthForm } from './components/AuthForm';
+import { MenuPage } from './components/MenuPage';
 
 function AppContent() {
 
@@ -10,16 +12,21 @@ function AppContent() {
 
   const renderCurrentView = () => {
     switch (state.currentView) {
-      case 'home':
+      case 'auth':
+        return <AuthForm />;
+      case 'menu':
+        return <MenuPage />;
+      default:
         return <HomePage />;
     }
   }
 
   return (
     <div className='min-h-screen bg-gray-50'>
-      {StaticRange.currentView !== 'auth' && (
+      {state.view !== 'auth' && ( 
         <Header showMobileMenu={showMobileMenu} setShowMobileMenu={setShowMobileMenu} />
       )}
+      {renderCurrentView()}
     </div>
   )
 }

@@ -12,14 +12,14 @@ export interface MenuItem {
     name: string;
     description: string;
     price: number;
-    category: 'pizza' | 'aperitivo' | 'bebidas' | 'sobremesa'
+    category: 'pizza' | 'appetizer' | 'drink' | 'dessert'
     image: string;
     popular?: boolean;
     ingredients?: string[];
     sizes?: {
-        small: number;
-        medium: number;
-        large: number;
+        pequena: number;
+        media: number;
+        grande: number;
     };
 }
 
